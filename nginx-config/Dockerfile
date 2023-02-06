@@ -2,4 +2,4 @@
 
 FROM php:7.2-fpm
 RUN mkdir /web-app
-COPY website /web-app
+ADD /website /web-app
