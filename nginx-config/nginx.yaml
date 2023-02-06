@@ -22,7 +22,7 @@ spec:
       lifecycle:
         postStart:
           exec:
-            command: ["/bin/sh", "-c", "cp -r /app/. /var/www/html"]
+            command: ["/bin/sh", "-c", "cp -r /web-app/. /var/www/html"]
 
 
     - image: nginx:1.7.9
