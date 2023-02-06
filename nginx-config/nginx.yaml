@@ -1,5 +1,4 @@
 kind: Pod
-Namespace: nginx
 apiVersion: v1
 metadata:
   name: phpfpm-nginx
