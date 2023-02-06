@@ -15,6 +15,7 @@ spec:
 
   containers:
     - image: my-php-app:1.0.0
+      imagePullPolicy: Always
       name: app
       volumeMounts:
         - name: shared-files
