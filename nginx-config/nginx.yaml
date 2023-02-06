@@ -25,7 +25,8 @@ spec:
             command: ["/bin/sh", "-c", "cp -r /web-app/. /var/www/html"]
 
 
-    - image: nginx:1.7.9
+    - image: nginx
+      imagePullPolicy: Always
       name: nginx
       volumeMounts:
         - name: shared-files
