@@ -25,6 +25,10 @@ data:
         server_name _;
 
         location / {
+          set $_rewrite_path "/index.php";
+          try_files       $uri/ @rewrite;
+          index           index.php;
+          expires         -1s;
           try_files $uri $uri/ =404;
         }
 
