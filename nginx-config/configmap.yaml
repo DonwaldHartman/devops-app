@@ -6,6 +6,7 @@
 # to our PHP-FPM container.
 
 kind: ConfigMap
+Namespace: nginx
 apiVersion: v1
 metadata:
   name: nginx-config
