@@ -30,7 +30,7 @@ spec:
             - containerPort: 80
           volumeMounts:
 
-            - mountPath: /var/www/html/
+            - mountPath: /var/website
               name: contents
 
       volumes:
