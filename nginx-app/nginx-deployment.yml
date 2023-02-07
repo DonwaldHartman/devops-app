@@ -7,22 +7,16 @@ metadata:
     app: nginx
     layer: frontend
 spec:
-
   replicas: 6
   selector:
     matchLabels:
       app: nginx
   template:
-
-
     metadata:
       labels:
         app: nginx
-
     spec:
-
       containers:
-
         - name: nginx
           image: nginx:alpine
           ports:
@@ -31,13 +25,12 @@ spec:
             - mountPath: /var/website
               name: contents
             - name: nginx-config
-                mountPath: /etc/nginx/conf.d
-
+              mountPath: /etc/nginx/conf.d
       volumes:
         - name: contents
           hostPath:
             path: /var/website
-            type: Directory          
+            type: Directory
         - name: nginx-config
           configMap:
             name: nginx-config
