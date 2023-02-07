@@ -40,6 +40,6 @@ spec:
 #        - name: nginx-config
 #          configMap:
 #            name: nginx            
-        - name: nginx-config-volume
+        - name: nginx-configx
           configMap:
             name: nginx-config
