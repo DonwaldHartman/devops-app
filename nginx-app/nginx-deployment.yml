@@ -30,7 +30,7 @@ spec:
           lifecycle:
               postStart:
                 exec:
-                  command: ["/bin/sh", "-c", "chown -R nginx:nginx /var/log/error.log"]
+                  command: ["/bin/sh", "-c", "chown -R www-data:www-data /var/website"]
 
       volumes:
         - name: contents
