@@ -18,7 +18,7 @@ data:
         listen [::]:80 default_server;
         
         # Set nginx to serve files from the shared volume!
-        root /var/website;
+        root /var/website/;
         charset utf-8;
         server_name _;
        
