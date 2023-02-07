@@ -31,6 +31,8 @@ spec:
           volumeMounts:
             - mountPath: /var/website
               name: contents
+            - mountPath: /opt/bitnami/php/etc/php-fpm.d
+              name: phpfpm-config
           lifecycle:
               postStart:
                 exec:
@@ -40,3 +42,6 @@ spec:
           hostPath:
             path: /var/website
             type: Directory
+        - name: phpfpm-config
+          configMap:
+            name: phpfpm-config
