@@ -28,7 +28,7 @@ spec:
           ports:
             - containerPort: 9000
           volumeMounts:
-            - mountPath: /var/www/html/
+            - mountPath: /var/website
               name: contents
         
       volumes:

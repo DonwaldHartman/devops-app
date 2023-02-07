@@ -28,16 +28,15 @@ spec:
           image: nginx:alpine
           ports:
             - containerPort: 80
-#          volumeMounts:
-#
-#            - mountPath: /var/website
-#              name: contents
+          volumeMounts:
+            - mountPath: /var/website
+              name: contents
 
       volumes:
         - name: contents
           hostPath:
             path: /var/website
-            type: Directory
+#            type: Directory
 
         - name: nginx-config
           configMap:
