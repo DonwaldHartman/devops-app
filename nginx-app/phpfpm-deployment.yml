@@ -24,14 +24,17 @@ spec:
       containers:
       
         - name: phpfpm
-          image: php:fpm-alpine
+          image: bitnami/php-fpm
           imagePullPolicy: Always
           ports:
             - containerPort: 9000
           volumeMounts:
             - mountPath: /var/website
               name: contents
-        
+          lifecycle:
+              postStart:
+                exec:
+                  command: ["/bin/sh", "-c", "chown -R www-data:www-data /var/website"]                      
       volumes:
         - name: contents
           hostPath:
