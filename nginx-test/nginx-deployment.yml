@@ -33,10 +33,6 @@ spec:
             - mountPath: /var/www/html/
               name: contents
 
-        - name: nginx-config-volume
-          configMap:
-            name: nginx-config
-
       volumes:
         - name: contents
           hostPath:
@@ -46,3 +42,7 @@ spec:
         - name: nginx-config
           configMap:
             name: nginx
+            
+        - name: nginx-config-volume
+          configMap:
+            name: nginx-config        
