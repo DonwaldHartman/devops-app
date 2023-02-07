@@ -1,3 +1,4 @@
+
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -7,41 +8,41 @@ metadata:
     app: nginx
     layer: frontend
 spec:
-    
+
   replicas: 6
   selector:
     matchLabels:
       app: nginx
   template:
-    
-    
+
+
     metadata:
       labels:
         app: nginx
-            
+
     spec:
-    
+
       containers:
-      
+
         - name: nginx
           image: nginx:alpine
           ports:
             - containerPort: 80
           volumeMounts:
-            
+
             - mountPath: /var/www/html/
               name: contents
-                
-            - name: nginx-config
-              mountPath: /etc/nginx/conf.d/default.conf
-              subPath: nginx.conf
-                
+
+        - name: nginx-config-volume
+          configMap:
+            name: nginx-config
+
       volumes:
         - name: contents
           hostPath:
             path: /var/website
             type: Directory
-                
+
         - name: nginx-config
           configMap:
             name: nginx
