@@ -36,7 +36,7 @@ spec:
           lifecycle:
               postStart:
                 exec:
-                  command: ["/bin/sh", "-c", "chown -R root:root /var/website"]                      
+                  command: ["/bin/sh", "-c", "chown -R www-data:www-data /var/website"]                      
       volumes:
         - name: contents
           hostPath:

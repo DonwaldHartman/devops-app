@@ -18,8 +18,8 @@ data:
               ; pool name ('www' here)
               [www]
               
-              user = root
-              group = root
+              user = www-data
+              group = www-data
               
               listen = 9000
               
