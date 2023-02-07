@@ -13,27 +13,27 @@ metadata:
 data:
   www.conf: |
           
-    ; Start a new pool named 'www'.
-    ; the variable $pool can be used in any directive and will be replaced by the
-    ; pool name ('www' here)
-    [www]
-    
-    user = daemon
-    group = daemon
-    
-    listen = 9000
-    
-    listen.allowed_clients = 127.0.0.1
-    
-    pm = ondemand
-    
-    pm.max_children = 5
-    
-    pm.start_servers = 2
-    
-    pm.min_spare_servers = 1
-    
-    pm.max_spare_servers = 3
-    
-    include=/opt/bitnami/php/etc/environment.conf
-    include=/opt/bitnami/php/etc/common.conf
+              ; Start a new pool named 'www'.
+              ; the variable $pool can be used in any directive and will be replaced by the
+              ; pool name ('www' here)
+              [www]
+              
+              user = daemon
+              group = daemon
+              
+              listen = 9000
+              
+              listen.allowed_clients = 127.0.0.1
+              
+              pm = ondemand
+              
+              pm.max_children = 5
+              
+              pm.start_servers = 2
+              
+              pm.min_spare_servers = 1
+              
+              pm.max_spare_servers = 3
+              
+              include=/opt/bitnami/php/etc/environment.conf
+              include=/opt/bitnami/php/etc/common.conf
