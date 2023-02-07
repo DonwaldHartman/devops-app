@@ -42,7 +42,7 @@ spec:
 #          configMap:
 #            name: nginx            
         - name: nginx-config-volume
-          defaultMode: 256
-          #optional: false
+          #defaultMode: 256
+          optional: false
           configMap:
             name: nginx-config
