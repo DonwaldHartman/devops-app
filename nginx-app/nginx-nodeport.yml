@@ -16,6 +16,6 @@ spec:
 
   ports:
    
-    - nodePort: 2600
+    - nodePort: 3600
       port: 80
       targetPort: 80
