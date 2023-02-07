@@ -27,10 +27,10 @@ spec:
               name: contents
             - mountPath: /etc/nginx/conf.d
               name: nginx-config
-          lifecycle:
-              postStart:
-                exec:
-                  command: ["/bin/sh", "-c", "chown -R www-data:www-data /var/website"]
+#          lifecycle:
+#              postStart:
+#                exec:
+#                  command: ["/bin/sh", "-c", "chown -R www-data:www-data /var/website"]
 
       volumes:
         - name: contents
