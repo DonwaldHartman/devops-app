@@ -38,9 +38,9 @@ spec:
             path: /var/website
 #            type: Directory
 
-        - name: nginx-config
-          configMap:
-            name: nginx
+#        - name: nginx-config
+#          configMap:
+#            name: nginx
             
         - name: nginx-config-volume
           configMap:
