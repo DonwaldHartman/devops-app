@@ -28,3 +28,12 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 9000
+          volumeMounts:
+            - mountPath: /var/website
+              name: contents
+        
+      volumes:
+        - name: contents
+          hostPath:
+            path: /var/website
+            type: Directory
