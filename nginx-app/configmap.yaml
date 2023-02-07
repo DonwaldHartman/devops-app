@@ -14,7 +14,7 @@ metadata:
 data:
   nginx.conf: |
       server {
-        listen 127.0.0.1:80;
+        listen 80 default_server;
        # listen [::]:80 default_server;
         
         # Set nginx to serve files from the shared volume!
