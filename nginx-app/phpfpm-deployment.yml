@@ -24,24 +24,16 @@ spec:
       containers:
       
         - name: phpfpm
-          image: bitnami/php-fpm
+          image: php:7.3-fpm
           imagePullPolicy: Always
           ports:
             - containerPort: 9000
           volumeMounts:
             - mountPath: /var/website
               name: contents
-            - mountPath: /opt/bitnami/php/etc/php-fpm.d
-              name: phpfpm-config
-          lifecycle:
-              postStart:
-                exec:
-                  command: ["/bin/sh", "-c", "chown -R www-data:www-data /var/website"]                      
+                    
       volumes:
         - name: contents
           hostPath:
             path: /var/website
             type: Directory
-        - name: phpfpm-config
-          configMap:
-            name: phpfpm-config

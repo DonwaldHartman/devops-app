@@ -1,4 +1,3 @@
-
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -19,7 +18,7 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: nginx
+          image: nginx:latest
           ports:
             - containerPort: 80
           volumeMounts:
@@ -27,10 +26,6 @@ spec:
               name: contents
             - mountPath: /etc/nginx/conf.d
               name: nginx-config
-          lifecycle:
-              postStart:
-                exec:
-                  command: ["/bin/sh", "-c", "chown -R www-data:www-data /var/website"]
 
       volumes:
         - name: contents
