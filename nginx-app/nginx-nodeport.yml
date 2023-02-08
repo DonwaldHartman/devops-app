@@ -34,7 +34,7 @@ spec:
       http:
         paths:
           - path: /
-            pathType: Prefrix
+            pathType: Exact
             backend:
               service:
                 name: nginx
