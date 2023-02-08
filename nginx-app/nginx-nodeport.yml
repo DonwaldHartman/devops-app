@@ -19,3 +19,24 @@ spec:
      port: 80
   externalIPs:
    - 178.79.160.49 
+---
+
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: my-ingress
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    cert-manager.io/cluster-issuer: letsencrypt-production
+spec:
+  rules:
+    - host: app.donwaldhartman.co.za
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: my-service
+              servicePort: 80
+  tls:
+    - hosts:
+      - app.donwaldhartman.co.za
