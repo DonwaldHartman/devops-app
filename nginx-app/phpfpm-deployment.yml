@@ -26,6 +26,7 @@ spec:
         - name: phpfpm
           image: bitnami/php-fpm
           imagePullPolicy: Always
+          command: ["php-fpm", "-y", "/opt/bitnami/php/php-fpm.conf", "-R"]
           ports:
             - containerPort: 9000
           volumeMounts:
