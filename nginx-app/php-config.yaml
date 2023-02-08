@@ -36,4 +36,7 @@ data:
               pm.max_spare_servers = 3
               
               include=/opt/bitnami/php/etc/environment.conf
-              include=/opt/bitnami/php/etc/common.conf
+              
+              listen.owner=root
+
+              listen.group=root
