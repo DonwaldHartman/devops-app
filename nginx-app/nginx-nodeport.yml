@@ -35,7 +35,7 @@ spec:
         paths:
           - path: /
             backend:
-              serviceName: my-service
+              serviceName: nginx
               servicePort: 80
   tls:
     - hosts:
