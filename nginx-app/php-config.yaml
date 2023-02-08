@@ -18,8 +18,8 @@ data:
               ; pool name ('www' here)
               [www]
               
-              user = root
-              group = root
+              user = www-data
+              group = www-data
               
               listen = 9000
               
@@ -37,6 +37,6 @@ data:
               
               include=/opt/bitnami/php/etc/environment.conf
               
-              listen.owner=root
+              listen.owner=www-data
 
-              listen.group=root
+              listen.group=www-data
