@@ -30,11 +30,11 @@ metadata:
     cert-manager.io/cluster-issuer: letsencrypt-production
 spec:
   rules:
-    - host: app.donwaldhartman.co.za
+    - host: button.donwaldhartman.co.za
       http:
         paths:
           - path: /
-            pathType: Exact
+            pathType: Prefix
             backend:
               service:
                 name: nginx
@@ -42,5 +42,5 @@ spec:
                   number: 80
   tls:
     - hosts:
-      - app.donwaldhartman.co.za
+      - button.donwaldhartman.co.za
       secretName: letsencrypt-staging
