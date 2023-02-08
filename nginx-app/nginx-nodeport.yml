@@ -40,7 +40,7 @@ spec:
                 name: nginx
                 port:
                   number: 80
-  tls:
-    - hosts:
-      - button.donwaldhartman.co.za
-      secretName: letsencrypt-staging
+#  tls:
+#   - hosts:
+#      - button.donwaldhartman.co.za
+#      secretName: letsencrypt-staging
