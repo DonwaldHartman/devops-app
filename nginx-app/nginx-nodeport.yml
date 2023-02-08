@@ -5,7 +5,7 @@ metadata:
   name: nginx
   labels:
     app: nginx
-    layer: backend
+    layer: frontend
         
 spec:
 
