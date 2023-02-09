@@ -39,4 +39,12 @@ data:
             fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
             include fastcgi_params;
         }
+       location ^~ /.well-known/acme-challenge/ {
+           default_type "text/plain";
+           root         /var/website;
+           break;
+          }
+       location = /.well-known/acme-challenge/ {
+          return 404;
+         }
       }
