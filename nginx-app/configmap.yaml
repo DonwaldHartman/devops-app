@@ -22,7 +22,7 @@ data:
         charset utf-8;
 
         index index.php index.html index.htm index.nginx-debian.html;
-        server_name _;
+        server_name button.donwaldhartman.co.za;
        
         access_log /var/log/access.log combined;                                                                                                                                                                                                   
         error_log /var/log/error.log;  
