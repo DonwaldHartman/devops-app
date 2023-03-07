@@ -18,6 +18,8 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - uses: engineerd/setup-kind@v0.1.0
+      env:
+        ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
     - name: Testing
       run: |
         export KUBECONFIG="$(kind get kubeconfig-path)"
