@@ -20,4 +20,4 @@ jobs:
     
     - name: Testing
       run: |
-        kubectl cluster-info
+        kubectl get pods -n nginx 
