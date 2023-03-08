@@ -10,8 +10,6 @@ jobs:
     name: Pre-Flight Test
     runs-on: self-hosted
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
       - name: Test Kubernetes resources
         run: |
           cp /etc/kubernetes/admin.conf $HOME/
@@ -28,15 +26,4 @@ jobs:
       - name: Restart webserver
         run: |
           kubectl rollout restart -n nginx
-  reporting:
-    name: Generating Report
-    runs-on: self-hosted
-    steps:
-      - name: Creating report
-        uses: actions/checkout@v2
-      - run: echo 'Content here. You *can* use Markdown.' | tee /tmp/report.md
-      - uses: ./
-        with:
-          name: Report name
-          title: Report title here
-          body-file: /tmp/report.md
+
