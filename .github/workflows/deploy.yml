@@ -17,7 +17,11 @@ jobs:
     name: Devops
     runs-on: self-hosted
     steps:
-    - uses: tale/kubectl-action@v1
-      with:
-       base64-kube-config: ${{ secrets.KUBE_CONFIG }}
-    - run: kubectl get pods -n nginx 
+      - uses: actions/checkout@v2
+      
+      - name: Testing
+        run: |
+          whoami
+          pwd
+          cat /etc/passwd
+          ls $HOME/.kube
