@@ -23,6 +23,5 @@ jobs:
         run: |
           whoami
           pwd
-          cat /etc/passwd
           ls $HOME
           kubectl get pods -n nginx 
