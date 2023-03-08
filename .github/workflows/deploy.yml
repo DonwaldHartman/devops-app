@@ -36,14 +36,12 @@ jobs:
           kubectl rollout restart -n nginx
   reporting:
     name: Generating Report
-    runs-on: ubuntu-latest
-    steps:
-      - name: Generate report
-        run: |
-          echo 'Content here. You *can* use Markdown.' | tee /tmp/report.md
-          # Then use this action to generate the report.
-          uses: dtinth/markdown-report-action@v1
-          with:
-            name: Report name
-            title: Report title here
-            body-file: /tmp/report.md
+    runs-on: self-hosted
+     steps:
+      - uses: actions/checkout@v2
+      - run: echo 'Content here. You *can* use Markdown.' | tee /tmp/report.md
+      - uses: ./
+        with:
+          name: Report name
+          title: Report title here
+          body-file: /tmp/report.md
