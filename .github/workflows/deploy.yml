@@ -20,6 +20,7 @@ jobs:
   webserver-rollout:
     name: Webserver Rollout
     runs-on: self-hosted
+    needs: pre-flight-test
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
