@@ -26,5 +26,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Restart webserver
         run: |
+          cp /etc/kubernetes/admin.conf $HOME/
+          chown $(id -u):$(id -g) $HOME/admin.conf
+          export KUBECONFIG=$HOME/admin.conf
           kubectl rollout restart deployment -n nginx
 
