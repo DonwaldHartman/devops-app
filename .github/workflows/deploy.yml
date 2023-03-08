@@ -20,4 +20,5 @@ jobs:
     
     - name: Testing
       run: |
+        export KUBECONFIG="$KUBECONFIG"
         kubectl get pods -n nginx 
