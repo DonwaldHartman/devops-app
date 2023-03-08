@@ -17,16 +17,7 @@ jobs:
     name: Devops
     runs-on: self-hosted
     steps:
-      - uses: actions/checkout@v2
-      - name: Pre-Flight Tests
-        run: |
-          ls ${HOME}/.kube
-      - name: Create kubeconfig
-        run: |
-         cd ${HOME}
-         pwd
-         echo ${{ secrets.KUBE_CONFIG }} | base64 --decode > ${HOME}/.kube/config
-         cat ${HOME}/.kube/config      
+      - uses: actions/checkout@v2   
       - name: Testing
         run: |
           whoami
