@@ -24,4 +24,4 @@ jobs:
           whoami
           pwd
           sudo su
-          kubctl get pods -n nginx 
+          kubectl get pods -n nginx 
