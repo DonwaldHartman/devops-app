@@ -22,5 +22,4 @@ jobs:
       - name: Testing
         run: |
           whoami
-          pwd
           kubectl get pods -n nginx 
