@@ -23,7 +23,5 @@ jobs:
         run: |
           whoami
           pwd
-          ls $HOME/.kube
-          kubectl get pods 
           sudo su
           kubctl get pods -n nginx 
