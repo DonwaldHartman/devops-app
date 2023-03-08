@@ -23,5 +23,4 @@ jobs:
         run: |
           whoami
           pwd
-          su ubuntu
           kubectl get pods -n nginx 
