@@ -24,4 +24,4 @@ jobs:
           whoami
           pwd
           cat /etc/passwd
-          ls $HOME/.kube
+          ls $HOME
