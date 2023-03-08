@@ -26,5 +26,5 @@ jobs:
         uses: actions/checkout@v2
       - name: Restart webserver
         run: |
-          kubectl rollout restart -n nginx
+          kubectl rollout restart deployment -n nginx
 
