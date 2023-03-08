@@ -20,4 +20,4 @@ jobs:
     
     - name: Testing
       run: |
-       whoami
+       kubectl get pods,svc -n nginx 
