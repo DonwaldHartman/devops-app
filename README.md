@@ -1,7 +1,8 @@
+![Logo](https://drive.google.com/uc?id=16Wt1Y4aFMcSTdyWSbNOGQkmfWpU-3s1O)
 
-# The Big Friendly Button Nginx Kubernetes Configs 
+# My portfolio Nginx Kubernetes Configs 
 
-These are the kubernetes configs for The Big Friendly Button Project 
+These are the kubernetes configs for my Devops / Gitops portfolio
 
 
 # Hi, I'm Donwald! 👋
@@ -20,11 +21,11 @@ Javascript, HTML, CSS, Kubernetes, ArgoCD
 
 ## Roadmap
 
-- Add Jenkins integrations
+- Add Github Actions
 
 - Create Terraform project 
 
 
 ## Screenshots
 
-![App Screenshot](http://button.donwaldhartman.co.za/images/big_friendly_button.png)
+![ScreenShot](https://drive.google.com/uc?id=1XJuFC-IC7ZxemphfgtA8YptofOlneb7S)
