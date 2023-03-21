@@ -13,7 +13,7 @@ These are the kubernetes configs for The Big Friendly Button Project
 
 ## Roadmap
 
-- Add Jenkins integrations
+- Add Github actions integrations
 
 - Create Terraform project 
 
