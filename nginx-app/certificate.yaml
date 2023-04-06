@@ -1,13 +1,12 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: button.donwaldhartman.co.za
+  name: donwaldhartman-certificate
 spec:
-  secretName: button.donwaldhartman.co.za
+  secretName: donwaldhartman-tls-secret
   dnsNames:
     - button.donwaldhartman.co.za
+    - argo.donwaldhartman.co.za
   issuerRef:
-    name: letsencrypt-production
-    # We can reference ClusterIssuers by changing the kind here.
-    # The default value is Issuer (i.e. a locally namespaced Issuer)
+    name: letsencrypt-staging
     kind: ClusterIssuer
