@@ -12,3 +12,9 @@ spec:
       - http01:
           ingress:
             class: nginx
+      - dns01:
+          cloudflare:
+            email: donwald.hartman@gmail.com
+            apiTokenSecretRef:
+              name: cloudflare-secret
+              key: cloudflare-token
