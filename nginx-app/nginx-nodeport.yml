@@ -32,7 +32,7 @@ metadata:
     cert-manager.io/cluster-issuer: letsencrypt-staging
 spec:
   tls:
-    - secretName: donwaldhartman-certificate
+    - secretName: donwaldhartman-tls-secret
       hosts:
         - button.donwaldhartman.co.za
         - argo.donwaldhartman.co.za
