@@ -1,4 +1,4 @@
-![Logo](https://drive.google.com/uc?id=16Wt1Y4aFMcSTdyWSbNOGQkmfWpU-3s1O)
+![Logo](https://drive.google.com/uc?1xSpP5nDq_z5kvgp5GS1DvU_TcpPq6yhu)
 
 # My portfolio Nginx Kubernetes Configs 
 
