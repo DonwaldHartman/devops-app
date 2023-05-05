@@ -18,7 +18,7 @@ spec:
    - protocol: TCP
      port: 80
   externalIPs:
-   - 178.79.160.49 
+   - 176.58.99.138 
 ---
 
 apiVersion: networking.k8s.io/v1
